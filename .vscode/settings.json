@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Grupp-9-P2-Rep.sln"
+    "dotnet.defaultSolution": "Gruppe-9---P2.sln"
 }
