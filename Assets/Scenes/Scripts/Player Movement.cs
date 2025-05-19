@@ -2,6 +2,55 @@ using UnityEngine;
 
 public class ClickToMove2D : MonoBehaviour
 {
+    [SerializeField] private float moveSpeed = 5f;
+
+    private Vector3 destination;
+    private bool hasDestination = false;
+    private Rigidbody2D rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            SetDestination(Input.GetTouch(0).position);
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            SetDestination(Input.mousePosition);
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (hasDestination)
+        {
+            Vector2 newPos = Vector2.MoveTowards(rb.position, destination, moveSpeed * Time.fixedDeltaTime);
+            rb.MovePosition(newPos);
+
+            if (Vector2.Distance(rb.position, destination) < 0.1f)
+            {
+                hasDestination = false;
+            }
+        }
+    }
+
+    private void SetDestination(Vector2 screenPosition)
+    {
+        destination = Camera.main.ScreenToWorldPoint(screenPosition);
+        destination.z = 0f;
+        hasDestination = true;
+    }
+}
+
+
+/*
+{
     [SerializeField] private Transform character; // The character you want to move
     [SerializeField] private float moveSpeed = 5f; // How fast the character moves
 
@@ -52,3 +101,4 @@ public class ClickToMove2D : MonoBehaviour
         }
     }
 }
+*/
