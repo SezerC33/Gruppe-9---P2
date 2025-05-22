@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossDestroy : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class BossDestroy : MonoBehaviour
         if (_tapCount >= tapsToDestroy)
         {
             Destroy(gameObject);
+            SceneManager.LoadScene("Past 1");
         }
     }
 }
