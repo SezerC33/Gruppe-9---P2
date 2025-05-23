@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Detection : MonoBehaviour
 {
-    private int correctCount = 0;
+    private static int correctCount = 0;
     private void OnTriggerEnter2D(Collider2D other)
     {
         // If the box's tag matches the falling object's tag.

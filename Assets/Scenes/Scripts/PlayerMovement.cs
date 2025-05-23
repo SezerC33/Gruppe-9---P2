@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ClickToMove2D : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
 
