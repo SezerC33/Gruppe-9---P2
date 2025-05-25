@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerCollector : MonoBehaviour
 {
-    public int CorrectPickupCount { get; private set; }
+    private int CorrectPickupCount;
 
     // Drag your boss-obstacle prefab into this slot in the Inspector
     public GameObject bossPrefab;

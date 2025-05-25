@@ -535,20 +535,23 @@ MonoBehaviour:
   dialogueText: {fileID: 1400594269}
   dialoguePanel: {fileID: 1055163353}
   lines:
-  - Lille pige!
-  - Gudskelov du er her!
-  - "Du g\xE6tter aldrig hvad ham den gamle har fundet."
-  - Et magisk stykke papir kaldet, The European Green Deal.
-  - "Den fort\xE6ller om en profeti fra en tid l\xE6nge glemt."
-  - "En tid uden giftigt drikkevand og skrald p\xE5 gaderne."
-  - En tid du ikke kender til...
-  - "Menneskerne fra fortiden opholdte ikke deres l\xF8fte om at redde fremtiden
-    og derfor faldt profetien i ruiner."
-  - "Men nu har det magiske stykke papir fundet os igen og menneskeheden har f\xE5et
-    en chance mere!"
-  - "Papiret har \xE5bnet en portal ud til fortiden."
-  - "Nu m\xE5 du tage tilbage til fortiden og fjerne alt skrald fra havet!"
-  - Held og lykke! Hele kloden regner med dig.
+  - "N\xF8\xF8\xF8\xF8j."
+  - Det virkede!
+  - Profetien talte virkelig sandt!
+  - Se dig omkring min pige.
+  - "Alt vandet er rent og bl\xE5t."
+  - "I hele din levetid har det v\xE6ret giftigt, men se nu!"
+  - Fremtiden ser en tand lysere ud.
+  - Men...
+  - "Vi er ikke f\xE6rdige endnu."
+  - Det magiske papir taler stadig til mig.
+  - "Den fort\xE6ller at skrald skal sorteres s\xE5 det ikke ligger og flyder p\xE5
+    vores gader."
+  - "Du bliver n\xF8dt til at tage en tur tilbage til fortiden og f\xE5 sorteret
+    skrald."
+  - "N\xE5r du er f\xE6rdig med at kigge p\xE5 det smukke vand i byen, m\xE5 du en
+    sidste gang tr\xE6de ind i portalen."
+  - "Ret op p\xE5 menneskehedens fejl. Vi regner med dig min pige."
   playerMovement: {fileID: 1159865591}
 --- !u!114 &1055163356
 MonoBehaviour:
@@ -777,7 +780,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1055163355}
-  playerMovement: {fileID: 1159865591}
 --- !u!70 &1124984140
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

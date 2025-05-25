@@ -3,7 +3,6 @@ using UnityEngine;
 public class NPCPress : MonoBehaviour
 {
     public DialogueBox dialogueBox;
-    public PlayerMovement playerMovement;
 
     void OnMouseDown()
     {

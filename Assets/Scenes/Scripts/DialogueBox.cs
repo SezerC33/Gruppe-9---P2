@@ -3,11 +3,8 @@ using TMPro;
 
 public class DialogueBox : MonoBehaviour
 {
-    [Header("UI References")]
     public TMP_Text dialogueText;
     public GameObject dialoguePanel;
-
-    [Header("Dialogue Data")]
     [TextArea] public string[] lines;
     private int currentLine = 0;
 

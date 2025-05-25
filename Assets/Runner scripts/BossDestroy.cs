@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class BossDestroy : MonoBehaviour
 {
-    [Tooltip("Number of taps required to destroy the boss")]
+    // Number of taps required to destroy the boss
     public int tapsToDestroy = 10;
 
     private int _tapCount = 0;
