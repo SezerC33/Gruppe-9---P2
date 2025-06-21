@@ -12,7 +12,7 @@ public class ObstacleSpawner : MonoBehaviour
     public float spawnX = 10f;
 
     // Y-axis positions corresponding to your lanes
-    public float[] laneYPositions = new float[] { -2f, 0f, 2f };
+    public float[] laneYPositions = new float[] { -3f, 0f, 3f };
 
     // Timer to track spawning intervals
     private float timer = 0f;

@@ -9,29 +9,29 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: 70eae09c70082c6408bf432f406fd161
   - enabled: 1
-    path: Assets/Scenes/Past.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Scenes/Future Standard.unity
     guid: 742d419826b98a141b804b03bbcaa08e
   - enabled: 1
-    path: Assets/Scenes/Sorting.unity
-    guid: 6a45e205f6d15f2438d9ff2f998408c4
+    path: Assets/Scenes/Past.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/Sub.unity
     guid: de161113ad6133041bb6f85ec0d23b0d
   - enabled: 1
-    path: Assets/Scenes/Past 3.unity
-    guid: a668b226e3ce5054e9761103c9cebd73
-  - enabled: 1
     path: Assets/Scenes/Past 1.unity
     guid: 0d9c5d07b89ae8a44a15f8cc93fdee00
+  - enabled: 1
+    path: Assets/Scenes/Future  2.unity
+    guid: 63aa367084bb53143ae7367b276aeccf
   - enabled: 1
     path: Assets/Scenes/Past 2.unity
     guid: 4eac9863e5ce4b047a39c0c4fa1dcd7d
   - enabled: 1
-    path: Assets/Scenes/Future  2.unity
-    guid: 63aa367084bb53143ae7367b276aeccf
+    path: Assets/Scenes/Sorting.unity
+    guid: 6a45e205f6d15f2438d9ff2f998408c4
+  - enabled: 1
+    path: Assets/Scenes/Past 3.unity
+    guid: a668b226e3ce5054e9761103c9cebd73
   - enabled: 1
     path: Assets/Scenes/Future  3.unity
     guid: c22355e790eb54c4faf77ca64ad175ba

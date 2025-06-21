@@ -461,9 +461,9 @@ MonoBehaviour:
   spawnInterval: 2
   spawnX: 12
   laneYPositions:
-  - -2
+  - -3
   - 0
-  - 2
+  - 3
 --- !u!4 &1869049463
 Transform:
   m_ObjectHideFlags: 0
@@ -514,9 +514,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swipeThreshold: 50
   laneYPositions:
-  - -2
+  - -3
   - 0
-  - 2
+  - 3
   moveSpeed: 10
 --- !u!212 &1962496598
 SpriteRenderer:
