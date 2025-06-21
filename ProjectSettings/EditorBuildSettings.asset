@@ -36,5 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Future  3.unity
     guid: c22355e790eb54c4faf77ca64ad175ba
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 9ed66e5ddc5f56240b891fe5d13061ab, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 5e85d2dabd18a48498c3b85b3a1d72d7, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: bc92e20c1f6022f46b8381b69ab8fc89, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 4fba507abdd71164fa1386b60376287a, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
