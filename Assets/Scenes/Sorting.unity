@@ -841,8 +841,8 @@ MonoBehaviour:
   - {fileID: 810012020648613895, guid: 111e751ca187e9f469eba0f20d508934, type: 3}
   - {fileID: 6787701519575688619}
   - {fileID: 4705453623095816080, guid: 307eb19a96aafe546ab9ab8110396202, type: 3}
-  SpawnRate: 1
-  PositionX: 10
+  SpawnRate: 2
+  PositionX: 7
 --- !u!4 &1846879920
 Transform:
   m_ObjectHideFlags: 0
@@ -1346,7 +1346,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.72, y: 3.52}
+    oldSize: {x: 3.32, y: 4.12}
     newSize: {x: 2.72, y: 3.52}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1528,7 +1528,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.42, y: 4.62}
+    oldSize: {x: 3.02, y: 5.22}
     newSize: {x: 2.42, y: 4.62}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
