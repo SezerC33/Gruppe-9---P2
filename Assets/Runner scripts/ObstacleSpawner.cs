@@ -1,45 +1,33 @@
-﻿using UnityEngine;
+﻿using UnityEngine; // Access Unity's core engine features
 
 public class ObstacleSpawner : MonoBehaviour
 {
-    // Array of obstacle prefabs to choose from
-    public GameObject[] obstaclePrefabs;
+    public GameObject[] obstaclePrefabs; // Array of obstacle prefabs to instantiate
+    public float spawnInterval = 2f;    // Time between spawns in seconds
+    public float spawnX = 10f;          // X-coordinate where obstacles appear
+    public float[] laneYPositions = new float[] { -3f, 0f, 3f }; // Y-positions for lanes
 
-    // Interval between spawns (in seconds)
-    public float spawnInterval = 2f;
+    private float timer = 0f; // Tracks time since last spawn
 
-    // X position where obstacles will be spawned
-    public float spawnX = 10f;
-
-    // Y-axis positions corresponding to your lanes
-    public float[] laneYPositions = new float[] { -3f, 0f, 3f };
-
-    // Timer to track spawning intervals
-    private float timer = 0f;
-
-    void Update()
+    void Update() // Called once per frame
     {
-        timer += Time.deltaTime;
+        timer += Time.deltaTime; // Increment timer by time since last frame
 
-        if (timer >= spawnInterval)
+        if (timer >= spawnInterval) // If enough time has passed
         {
-            SpawnObstacle();
-            timer = 0f;
+            SpawnObstacle(); // Create a new obstacle
+            timer = 0f;      // Reset the timer
         }
-
     }
 
-    void SpawnObstacle()
+    void SpawnObstacle() // Handles obstacle instantiation
     {
-        // Randomly choose a lane
-        int lane = Random.Range(0, laneYPositions.Length);
-        Vector3 spawnPosition = new Vector3(spawnX, laneYPositions[lane], 0f);
+        int lane = Random.Range(0, laneYPositions.Length); // Pick a random lane index
+        Vector3 spawnPosition = new Vector3(spawnX, laneYPositions[lane], 0f); // Compute spawn position
 
-        // Randomly choose which obstacle prefab to spawn
-        int prefabIndex = Random.Range(0, obstaclePrefabs.Length);
-        GameObject selectedPrefab = obstaclePrefabs[prefabIndex];
+        int prefabIndex = Random.Range(0, obstaclePrefabs.Length); // Pick a random obstacle prefab
+        GameObject selectedPrefab = obstaclePrefabs[prefabIndex];   // Get the chosen prefab
 
-        // Instantiate it
-        Instantiate(selectedPrefab, spawnPosition, Quaternion.identity);
+        Instantiate(selectedPrefab, spawnPosition, Quaternion.identity); // Spawn it at the position
     }
 }

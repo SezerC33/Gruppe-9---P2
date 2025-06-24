@@ -2,51 +2,52 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float moveSpeed = 5f; // Movement speed adjustable in the inspector
 
-    private Vector3 destination;
-    private bool hasDestination = false;
-    private Rigidbody2D rb;
+    private Vector3 destination; // World-space position the player is moving toward
+    private bool hasDestination = false; // Whether a destination has been set
+    private Rigidbody2D rb; // Reference to the Rigidbody2D component for physics-based movement
 
-    void Start()
+    void Start() // Called before the first frame update
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>(); // Cache the Rigidbody2D component
     }
 
-    void Update()
+    void Update() // Called once per frame
     {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) // On mobile touch begin
         {
-            SetDestination(Input.GetTouch(0).position);
+            SetDestination(Input.GetTouch(0).position); // Set movement target to touch position
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)) // On left mouse button click
         {
-            SetDestination(Input.mousePosition);
+            SetDestination(Input.mousePosition); // Set movement target to mouse position
         }
     }
 
-    void FixedUpdate()
+    void FixedUpdate() // Called at fixed intervals for physics updates
     {
-        if (hasDestination)
+        if (hasDestination) // Only move if a destination is set
         {
-            Vector2 newPos = Vector2.MoveTowards(rb.position, destination, moveSpeed * Time.fixedDeltaTime);
-            rb.MovePosition(newPos);
+            Vector2 newPos = Vector2.MoveTowards(rb.position, destination, moveSpeed * Time.fixedDeltaTime); // Calculate step toward destination
+            rb.MovePosition(newPos); // Move the Rigidbody2D to the new position
 
-            if (Vector2.Distance(rb.position, destination) < 0.1f)
+            if (Vector2.Distance(rb.position, destination) < 0.1f) // If close enough to destination
             {
-                hasDestination = false;
+                hasDestination = false; // Stop moving
             }
         }
     }
 
-    private void SetDestination(Vector2 screenPosition)
+    private void SetDestination(Vector2 screenPosition) // Converts screen input to world position
     {
-        destination = Camera.main.ScreenToWorldPoint(screenPosition);
-        destination.z = 0f;
-        hasDestination = true;
+        destination = Camera.main.ScreenToWorldPoint(screenPosition); // Translate screen coords to world coords
+        destination.z = 0f; // Ensure movement stays in 2D plane
+        hasDestination = true; // Flag to start moving
     }
 }
+
 
 
 /*
