@@ -1,4 +1,4 @@
-using UnityEngine; // Access Unity's core engine features
+using UnityEngine;
 
 [AddComponentMenu("Gameplay/Boss Entry")] // Adds this script under the "Gameplay/Boss Entry" menu in the Component menu
 public class BossEntry : MonoBehaviour // Handles sliding the boss into the scene on enable

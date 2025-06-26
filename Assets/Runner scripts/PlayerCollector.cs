@@ -1,4 +1,4 @@
-using UnityEngine; // Access Unity's core engine features
+using UnityEngine;
 
 public class PlayerCollector : MonoBehaviour // Handles player pickups and triggers boss spawn
 {
@@ -26,19 +26,9 @@ public class PlayerCollector : MonoBehaviour // Handles player pickups and trigg
                     spawner.laneYPositions[1],
                     0f
                 );
+
                 Instantiate(bossPrefab, bossPos, Quaternion.identity); // Spawn the boss
-
-                spawner.enabled = false; // Disable further obstacle spawning
-
-                if (!other.CompareTag("Player")) // This will never be true here
-                {
-                    Debug.Log("Correct"); // Log correct branch
-                }
-                else
-                {
-                    Debug.Log("Wrong"); // Log wrong branch
-                    Destroy(other.gameObject); // This line duplicates earlier destroy
-                }
+                spawner.enabled = false;                              // Disable further obstacle spawning
             }
         }
     }

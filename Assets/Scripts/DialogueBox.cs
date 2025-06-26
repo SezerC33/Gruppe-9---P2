@@ -1,5 +1,5 @@
-using UnityEngine; // Access Unity's core engine features
-using TMPro; // Access TextMeshPro UI components
+using UnityEngine;
+using TMPro;
 
 public class DialogueBox : MonoBehaviour
 {

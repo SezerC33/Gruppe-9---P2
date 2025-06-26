@@ -951,7 +951,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 992647968}
-  playerMovement: {fileID: 1159865591}
 --- !u!70 &1124984140
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
